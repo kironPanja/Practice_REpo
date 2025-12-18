@@ -34,6 +34,8 @@ alter table Students add(duration int);
 
 alter table students modify City varchar(40);
 
+alter table students modify Fee decimal(7,2);
+
 alter table students drop column duration;
 
 desc students;
@@ -52,3 +54,4 @@ delete from students
 where Sid=6;
 
 Select * from students;
+
