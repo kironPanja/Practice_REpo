@@ -23,3 +23,4 @@ INSERT INTO sales_table VALUES
 ('Mandy', 2019, 'Canada', 'Mobile', 25000);
 
 select * from sales_table ;
+
