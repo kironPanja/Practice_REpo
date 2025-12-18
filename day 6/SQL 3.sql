@@ -32,5 +32,16 @@ select * from dept ;
 
 select E.eid , E.mid , M.eid , M.mid from emp E , emp M where E.mid = M.eid;
 
+select salary from emp where Ename = 'tom';
+
+ select * from emp where salary > (select salary from emp where Ename = 'tom') ;
+
+ select * from emp where salary <ALL (select salary from emp where job = 'Developer') ;
+ 
+-- update emp set salary = salary + 1000 where dno in (select dno from dept where location IN ('chennai','Bangalore') ;
+
+select * from emp view ;
+
+select ename , salary , rank() over(order by salary desc) ranks from emp;
 
 
