@@ -1,0 +1,162 @@
+Constraints:
+------------
+Set of Rules.
+
+PRIMARY KEY = NOT NULL + UNIQUE
+FOREIGN KEY (References) = Set of values from PK or Null value
+NOTNULL = Column value cannot be null , it should be some value
+UNIQUE  = Column values should be unique(duplicat is not allowed) but null is allowed
+CHECK  = it is used for custom/user defined constraints
+ex:  EName varchar(30) Check(Ename = Upper(Ename))
+
+	
+
+ Relationship between tables can be done using (PK + FK)  or (UNIQUE + FK)
+
+CREATE TABLE  Passenger(
+              Pid  int(3) ,
+	      PNAME  varchar(15)   NOT NULL ,
+	      Mno   int(10) UNIQUE ,
+		
+	     CONSTRAINT  passenger_pid_pk  PRIMARY KEY(PID) 	
+	   	
+ 
+				
+
+);
+
+INSERT INTO Passenger values(10,'Raju',9988776655);
+==============================
+CREATE  TABLE  Flight(
+  fid int ,
+ fname  varchar(20)  ,
+ source varchar(20) ,
+ destination varchar(20) ,
+ pid  int(3) ,
+
+	CONSTRAINT  flight_pid_fk  FOREIGN KEY(pid)  references  Passenger(pid)
+
+)
+
+
+
+
+
+
+Example for Composite Key:
+=========================
+
+
+CREATE TABLE  Passenger_Info(
+              Pid  int(3) ,
+	      PNAME  varchar(15)   ,
+	      Mno   int(10) UNIQUE ,
+		
+	     CONSTRAINT  passenger_pid_pname_pk  PRIMARY KEY(PID,PNAME) 	
+	   	
+ 
+				
+
+);
+
+CREATE  TABLE  Flight_Info(
+  fid int ,
+ fname  varchar(20)  ,
+ source varchar(20) ,
+ destination varchar(20) ,
+ pid  int(3) ,
+ pname  varchar(15),
+
+	CONSTRAINT  flight_pid_pname_fk  FOREIGN KEY(pid,pname) references  Passenger_Info(pid,pname)
+
+);
+
+
+ ALTER TABLE Flight Modify fid  int  CHECK( fid > 50);
+
+ALTER TABLE Flight Modify destination  varchar(20) CONSTRAINT flight_destination_chk
+    -> CHECK(destination IN ('Chennai','Delhi','Mumbai'));
+
+CASCADE:
+
+1. ON DELETE SET NULL  // It will set all dependent records in foreign key / child table as NULL
+2. ON DELETE CASCADE  // It will delete all dependent records in foreign key / child table 
+
+
+
+
+=======================================================================
+For more practice
+
+
+
+CREATE TABLE Customer(Cid Integer PRIMARY KEY  ,
+                      CName varchar(20) NOT NULL ,
+                      email  varchar(30) UNIQUE ,
+		      City  varchar(20) CHECK (city = UPPER(city)),
+		       Pincode  Integer  default  0,
+			age  int(3)  CHECK (age > 18) 
+
+			);
+
+
+
+
+
+CHECK (city = UPPER(city))
+
+    hyderabad = HYDERABAD
+
+    PUNE   = PUNE
+
+------------------------------------------------------------------------
+
+insert into customer  values(10,'Tom','tom@gmail.com','NEW YORK',50001,29);
+
+
+insert into customer  values(10,'Jerry','tom@gmail.com','NEW YORK2',50002,40);
+
+
+---------------------------------------
+
+Table mappings:
+
+one to one
+one to many
+many to one
+many to many
+
+
+
+PK (NON NULL + UNIQUE)  ---> FK
+
+UNIQUE ----> FK
+
+
+Note: When ever any table get PK or UNIQUE constraint columns immediately , one index will be created by system for that table.
+
+
+
+child table or detail table:
+----------------------------
+
+CREATE TABLE Products (
+Pid Int  PRIMARY KEY,
+ PName  varchar(25) NOT NULL, 
+Price decimal(10) , 
+Cid  Int  ,
+FOREIGN KEY(cid)  references Customer(cid)
+)
+
+
+
+---------------
+
+User defined INDEXes:
+
+CREATE INDEX Emp_Index ON Employee(ename,salary);
+
+
+
+
+

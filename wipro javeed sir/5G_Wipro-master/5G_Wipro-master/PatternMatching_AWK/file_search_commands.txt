@@ -1,0 +1,500 @@
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ date  > result.out
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat result.out
+Fri Apr 25 09:15:33 IST 2025
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ wc  file1.txt
+ 3 10 49 file1.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ wc   -lw   file1.txt
+ 3 10 file1.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ wc  -l  products.txt
+5 products.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ wc  <   products.txt  > output.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat output.txt
+ 5 15 99
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat file1.txt
+this is javeed owner
+this is line2
+this is line3
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat file2.txt
+this is javeed owner
+this is line2
+this is line3
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cmp  file1.txt  file2.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat >>  file1.txt
+this is line4
+
+[5]+  Stopped                 cat >> file1.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat file1.txt
+this is javeed owner
+this is line2
+this is line3
+this is line4
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cmp  file1.txt file2.txt
+cmp: EOF on ‘file2.txt’ after byte 49, line 3
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cmp  file1.txt  products.txt
+file1.txt products.txt differ: char 1, line 1
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ comm file1.txt  file2.txt
+                this is javeed owner
+                this is line2
+                this is line3
+this is line4
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ diff file1.txt  file2.txt
+4d3
+< this is line4
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ ls
+Intro-to-Linux_Commands.pdf  c.out              file2.txt          items.txt          myfile.txt    user/
+Linux_Commands.txt           commands_file.txt  file3.txt          kernel.png         output.txt
+alltextfiles.out             data.txt           file_commands.txt  kernel_design.jpg  products.txt
+bgjobs.txt                   file1.txt          input.txt          linux_setup.pdf    result.out
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ tr  "[a-z]"  "[A-Z]"  <  products.txt
+101  MOBILE  50000
+102  LAPTOP  65000
+103  BOOKS    2000
+104  TOYS      500
+105  CHARGER  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ ls -l  products.txt
+-rw-r--r-- 1 DELL 197121 99 Apr 24 13:08 products.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ chmod  u+x  products.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ ls -l  products.txt
+-rw-r--r-- 1 DELL 197121 99 Apr 24 13:08 products.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ head  -3  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ tail  -3  products.txt
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ tail  +3  products.txt
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ tail  +2  products.txt
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ sort  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ sort -r  products.txt
+105  charger  1200
+104  toys      500
+103  books    2000
+102  laptop  65000
+101  mobile  50000
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ ls
+Intro-to-Linux_Commands.pdf  bgjobs.txt               data.txt   file_commands.txt  kernel_design.jpg  products.txt
+Linux_Commands.txt           c.out                    file1.txt  input.txt          linux_setup.pdf    result.out
+RegularExpressions.txt       chmod_commands_demo.png  file2.txt  items.txt          myfile.txt         user/
+alltextfiles.out             commands_file.txt        file3.txt  kernel.png         output.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat >>  vehicle
+maruthi
+honda
+hero
+honda
+bmw
+maruthi
+suzuki
+rangerover
+bmw
+
+[6]+  Stopped                 cat >> vehicle
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat vehicle
+maruthi
+honda
+hero
+honda
+bmw
+maruthi
+suzuki
+rangerover
+bmw
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq vehicle
+maruthi
+honda
+hero
+honda
+bmw
+maruthi
+suzuki
+rangerover
+bmw
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq  -u vehicle
+maruthi
+honda
+hero
+honda
+bmw
+maruthi
+suzuki
+rangerover
+bmw
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat  items.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat >> items.txt
+102  laptop  65000
+104  toys      500
+
+[7]+  Stopped                 cat >> items.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat  items.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+102  laptop  65000
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq items.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+102  laptop  65000
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq  -d items.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq  -u  items.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+102  laptop  65000
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq  -u  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq items.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat items.txt
+101  mobile  50000
+102  laptop  65000
+102  laptop  65000
+103  books    2000
+104  toys      500
+104  toys      500
+105  charger  1200
+
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq -u items.txt
+101  mobile  50000
+103  books    2000
+105  charger  1200
+
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq -d items.txt
+102  laptop  65000
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ uniq -c items.txt
+      1 101  mobile  50000
+      2 102  laptop  65000
+      1 103  books    2000
+      2 104  toys      500
+      1 105  charger  1200
+      1
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ tee
+
+[8]+  Stopped                 tee
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ tee  newfile.txt  < file1.txt
+this is javeed owner
+this is line2
+this is line3
+this is line4
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat  newfile.txt
+this is javeed owner
+this is line2
+this is line3
+this is line4
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ find .  -name  file1.txt
+./file1.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ find  / -name  products.txt
+find: ‘/tmp/WinSAT’: Permission denied
+
+[9]+  Stopped                 find / -name products.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cd ..
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d
+$ ls
+'$RECYCLE.BIN'/              Hexaware_Foundation_Repo/                               Oracle_Artifacts/
+ 5G_Testing_Repo/            JABatch2_LocalRepo/                                     Oracle_Downloads/
+ ActiveMQ/                   JSF-Hello-World-master.zip                              Pattern_Searching_Alogrithms/
+ Angular18/                  Java_Foundation/                                        Student/
+ Angular_Batch2_Repo/        Java_NMS_Wipro/                                        'System Volume Information'/
+ Angular_Wipro/              Javeed_Repo/                                            VSCode/
+ Angular_Workspace_Batch2/   Latest_Java_PDFs/                                       core_java_workspace/
+ Assigned_CaseStudies/       Linux_Commands/                                         debug.log
+ CP_JavaFSD/                 Manipal_Materials/                                      drivers/
+ Capg_CoreJava/              Manipal_Materials-20240713T074211Z-001.zip              jsf2-hello-world-master.zip
+ Capg_JavaBatch3/            MemoryAnalyzer-1.15.0.20231206-win32.win32.x86_64.zip   log4j.jar
+ Capg_JavaBatch3_Day1.zip    MyWorkDir/                                              sts-4.22.1.RELEASE/
+ CoreJava_Foundation/        NMS_JEE_Workspace/                                      tomcat_software/
+ EP_Wipro_Repo/              NMS_MS/                                                 visualvm_218/
+ Eclipse/                    NMS_WiproBatch1_Docs/                                   visualvm_218.zip
+ FSD_Trainer_PPT_1/         'New folder'/                                            wipro/
+ FSD_Trainer_PPT_1.zip       Nms_JavaWipro_Docs/
+ Hexaware_2025/              OracleJSE_OLD/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d
+$ cd ..
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /
+$ ls
+LICENSE.txt        bin/  dev/  git-bash.exe*  mingw64/  tmp/          unins000.exe*  usr/
+ReleaseNotes.html  cmd/  etc/  git-cmd.exe*   proc/     unins000.dat  unins000.msg
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /
+$ find / -name  LICENSE.txt
+/LICENSE.txt
+find: ‘/tmp/WinSAT’: Permission denied
+/usr/share/licenses/libopenssl/LICENSE.txt
+
+[10]+  Stopped                 find / -name LICENSE.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /
+$ cd d
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d
+$ cd 5g
+bash: cd: 5g: No such file or directory
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d
+$ cd 5G_Testing_Repo/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ ls
+Intro-to-Linux_Commands.pdf  c.out                    file2.txt          kernel.png         output.txt
+Linux_Commands.txt           chmod_commands_demo.png  file3.txt          kernel_design.jpg  products.txt
+RegularExpressions.txt       commands_file.txt        file_commands.txt  linux_setup.pdf    result.out
+alltextfiles.out             data.txt                 input.txt          myfile.txt         user/
+bgjobs.txt                   file1.txt                items.txt          newfile.txt        vehicle
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ grep 'laptop'  products.txt
+102  laptop  65000
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ grep '10'  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ grep 'toys'  products.txt
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ grep   -c 'toys'  products.txt
+1
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ grep  -c '10'  products.txt
+5
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ cat  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ grep  '^101'  products.txt
+101  mobile  50000
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ grep  '500$'  products.txt
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ grep '[Tt]oys'  products.txt
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ fgrep
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ fgrep  -f  'top'  products.txt
+grep: top: No such file or directory
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ fgrep  mobile  products.txt
+101  mobile  50000
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ fgrep  mob  products.txt
+101  mobile  50000
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ fgrep  e  products.txt
+101  mobile  50000
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ egrep   [Tt]oys  products.txt
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ egrep   toys  products.txt
+104  toys      500
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ egrep   [a-z]{4}  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing_Repo (master)
+$ egrep   [0-9]{5}  products.txt
+101  mobile  50000
+102  laptop  65000

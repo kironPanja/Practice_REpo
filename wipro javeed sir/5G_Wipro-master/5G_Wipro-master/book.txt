@@ -1,0 +1,8 @@
+1001|Unix for You |375              
+1002|Learning Unix|250$
+1002|Learning Unix|250
+1003|Unix Shell Programming |450
+1003|Unix Shell Programming |450
+1004|Unix Device Drivers    |375
+^1005|Advanced Unix Concepts |450
+

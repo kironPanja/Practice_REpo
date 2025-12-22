@@ -1,0 +1,100 @@
+CREATE TABLE  Students
+(
+sid  int(3)  primary key   auto_increment ,
+sname  varchar(15)  default  'NOT GIVEN' ,
+course  varchar(15) unique  ,
+fee      double(7,2) ,
+dob        date,
+gender    char(1) ,
+city       varchar(20) 	
+);
+
+
+INSERT INTO Students(sname,course,fee,dob,gender,city) 
+                      values('Ravi','Java',5000.00,'2001-09-05','M','Hyderabad');
+
+
+INSERT INTO Students(course,fee,dob,gender,city) 
+                      values('Python',4000,current_date,'M','Chennai');
+
+INSERT INTO Students(sname,course,fee) values('tom','sql',7000);
+
+
+
+
+INSERT INTO Students(sname,course,fee,dob,gender,city) 
+                      values('Smith','C++',3000,current_date,'M','Pune') ,
+				('Ford','AI/ML',9000,current_date-1,'M','Mumbai')  ,
+					('Scott','C-lang',2000,current_date,'M','Delhi');  
+
+
+
+DDL:
+
+CREATE - it is used to create database objects (tables,users,indexes,views)
+
+ALTER - it is used to modify database object structures
+
+
+ALTER has 4 options
+ADD , MODIFY , DROP ,RENAME
+
+ALTER with ADD:
+ALTER TABLE Students  ADD(duration  int(3));
+
+
+ALTER with MODIFY:
+
+ALTER TABLE  Students  MODIFY  City  varchar(40);
+
+ALTER with DROP:
+
+ALTER TABLE Students DROP Column  duration;
+ALTER TABLE  Students  DROP constraint  constraint_name;
+
+
+TRUNCATE:
+--------
+it is used to remove/delete all the records from table.
+
+TRUNCATE TABLE Students;
+
+RENAME:
+it is used to rename  table name or column name.
+
+
+RENAME  TABLE Students to  Students_Info; // invalid in mysql
+
+ALTER TABLE Students RENAME to  Students_Info;
+
+Rename column using ALTER:
+
+ALTER TABLE Students_info RENAME Column sname to student_name;
+
+
+DROP:
+-----
+It is used to drop any database objects (tables , databases , users,indexes , views)
+
+DROP Table Students;
+
+=====================================
+
+DML:
+
+INSERT , UPDATE , DELETE
+
+insert - it is used to insert/create new records in tables.
+
+update- it is used to modify data in existing records
+
+update  students_info  set  fee = 8000.00  , course = 'Adv Java'  where  sid = 1;
+
+
+Delete: it is used to delete records from tables.
+
+Delete from  Students_info  ;  // delete all
+
+Delete from Students_info  where  sid  = 9;
+
+

@@ -1,0 +1,192 @@
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ whoami
+DELL
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ hostname
+DESKTOP-8Q19HR3
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ echo "Hello"
+Hello
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ echo   1+2
+1+2
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ echo   (1+2)
+bash: syntax error near unexpected token `1+2'
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ echo   "Hello friends"
+Hello friends
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ echo  $HOME
+/c/Users/DELL
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ echo  $(1+2)
+bash: 1+2: command not found
+
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ date
+Thu Apr 24 12:25:33 IST 2025
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ date
+Thu Apr 24 12:26:01 IST 2025
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cal
+bash: cal: command not found
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ mkdir  user
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ mkdir javeed
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+javeed/  user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cat  myfile.txt
+cat: myfile.txt: No such file or directory
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cat >>  myfile.txt
+Hello Friends
+How are you?
+I am Javeed
+Thank you
+
+[1]+  Stopped                 cat >> myfile.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+javeed/  myfile.txt  user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cat  myfile.txt
+Hello Friends
+How are you?
+I am Javeed
+Thank you
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls -all
+total 17
+drwxr-xr-x 1 DELL 197121  0 Apr 24 12:38 ./
+drwxr-xr-x 1 DELL 197121  0 Apr 24 11:03 ../
+drwxr-xr-x 1 DELL 197121  0 Apr 24 12:35 javeed/
+-rw-r--r-- 1 DELL 197121 49 Apr 24 12:38 myfile.txt
+drwxr-xr-x 1 DELL 197121  0 Apr 24 12:35 user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cd   javeed
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing/javeed
+$ ls
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing/javeed
+$ cd ..
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cd /
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /
+$ cd d
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d
+$ cd 5G_Testing/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ touch myfile.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+javeed/  myfile.txt  user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ touch  hello.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+hello.txt  javeed/  myfile.txt  user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cat > hello.txt
+hello friends
+
+[2]+  Stopped                 cat > hello.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cat hello.txt
+hello friends
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+hello.txt  javeed/  myfile.txt  user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ rm hello.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+javeed/  myfile.txt  user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ rmdir  javeed
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+myfile.txt  user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cat >> products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+[3]+  Stopped                 cat >> products.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cat  products.txt
+101  mobile  50000
+102  laptop  65000
+103  books    2000
+104  toys      500
+105  charger  1200
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ mv products.txt  items.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+items.txt  myfile.txt  user/
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cat products.txt
+cat: products.txt: No such file or directory
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ cp  items.txt  products.txt
+
+DELL@DESKTOP-8Q19HR3 MINGW64 /d/5G_Testing
+$ ls
+items.txt  myfile.txt  products.txt  user/

@@ -1,0 +1,5 @@
+thank you 
+
+:wq
+hello friends
+

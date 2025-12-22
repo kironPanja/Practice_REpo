@@ -1,0 +1,63 @@
+
+pattern:
+
+"apple" -->   app ,  ple , le  ,pp , ap
+
+[ ] : It means single character only
+
+[A-Z] : Any single upper case char   A , B , D , G , Y , Z
+[a-z] : Any single  lower case char   a, b , e , g , k , w , z
+
+[0-9] : Any single digit   1 , 4  , 0 , 7 ,9  ,2   
+
+[6-9] : Any single digit between  6 to 9 
+
+
+[A-Za-z] :  A , Z , D , a , b , c , g , z
+
+[A-Z][a-z] :  Ab  , Le  , Di  , Om  , Go , Fi  
+
+[A-Za-z0-9] : A , B , a , d , 4 ,3 ,9
+
+[$#@] : $ , # , @ 
+
+
+[a-z]{3} :  tom , can  , tim , bun , run
+
+[a-z]{3,7} : tom , can , run  , javeed , linuxos 
+
+
+[A-Za-z]{4,*} : Javeed , javeed  , javEED , JAVEED
+
+
+
+
+
+binary numbers
+
+0-7 
+
+000  - 0
+001  - 1
+010  - 2 
+011  - 3 
+100  - 4
+101  - 5
+110  - 6
+111  - 7
+
+Range of values : 000  to 777
+
+chmod  700  file1.txt
+chmod  234   file1.txt
+
+
+
+
+
+
+grep   '^A'  file.txt
+
+grep  'A$' file.txt
+
+grep  '^\$'  file.txt

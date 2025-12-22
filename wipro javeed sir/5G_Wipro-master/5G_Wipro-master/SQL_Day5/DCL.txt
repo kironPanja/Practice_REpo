@@ -1,0 +1,63 @@
+DCL:
+----
+Data Control Language.
+
+GRANT , REVOKE
+
+DBA 
+
+syn: create user javeed identified by tiger;
+
+Admin 
+
+GRANT CONNECT,RESOURCE to javeed;
+REVOKE  RESOURCE FROM javeed;
+
+
+--------------------------------
+root user ---> Employee
+javeed user 
+
+login: root/admin
+grant select,update,insert,delete on Employee to javeed;
+revoke  update,insert,delete on Employee from javeed;
+
+
+mysql connect new user:
+----------------------------
+
+
+mysql --host=localhost --user=myname --password=password mydb
+mysql -h localhost -u myname -p password mydb
+
+
+Developer:
+----------
+
+Students table --> root
+
+
+connect  root/admin
+
+
+grant  select  on  Students  to javeed;
+
+grant  insert,update,delete  on  Students  to javeed;
+
+revoke  update,delete on Students  from javeed;
+
+connect  javeed/tiger
+
+select * from students; // allowed
+insert query; //allowed
+
+update/delete   // not allowed
+
+
+
+
+
+
+
+
+

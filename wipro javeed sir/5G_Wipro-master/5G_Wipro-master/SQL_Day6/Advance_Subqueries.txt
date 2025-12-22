@@ -1,0 +1,42 @@
+mysql> select Ename , salary , (select sum(salary) from Employee) - salary  as Total  , Job from employee;
++--------+----------+-----------+-----------+
+| Ename  | salary   | Total     | Job       |
++--------+----------+-----------+-----------+
+| King   | 50000.00 | 291000.00 | President |
+| Smith  | 45000.00 | 296000.00 | Manager   |
+| Ford   | 40000.00 | 301000.00 | Manager   |
+| Tom    | 30000.00 | 311000.00 | Developer |
+| Scott  | 35000.00 | 306000.00 | Developer |
+| Jerry  | 25000.00 | 316000.00 | Tester    |
+| Ravi   | 22000.00 | 319000.00 | Tester    |
+| Adam   | 47000.00 | 294000.00 | Analyst   |
+| javeed | 47000.00 | 294000.00 | manager   |
+| anil   |     NULL |      NULL | NULL      |
++--------+----------+-----------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select eid, ename, job from  (select eid ,ename, job from Employee) E;
++-----+--------+-----------+
+| eid | ename  | job       |
++-----+--------+-----------+
+| 101 | King   | President |
+| 102 | Smith  | Manager   |
+| 103 | Ford   | Manager   |
+| 104 | Tom    | Developer |
+| 105 | Scott  | Developer |
+| 106 | Jerry  | Tester    |
+| 107 | Ravi   | Tester    |
+| 108 | Adam   | Analyst   |
+| 109 | javeed | manager   |
+| 110 | anil   | NULL      |
++-----+--------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select eid, ename, job , salary  from  (select eid ,ename, job from Employee) E;
+ERROR 1054 (42S22): Unknown column 'salary' in 'field list'
+mysql>
+
+
+
+
+
