@@ -87,3 +87,6 @@ select count(*) as count from emp where job = 'Tester' ;
 
 SELECT  ENAME , SALARY + IFNULL (COMM ,  0)   as Total  from emp;
 
+SELECT ROUND(AVG(salary)) AS average
+FROM emp;
+
